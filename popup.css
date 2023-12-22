@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    appearance: none;
+    border: none;
+    outline: none;
+    user-select: none;
+}
+
+html, body, #main {
+    width: 300px;
+    height: 400px;
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+}
+
+#controls {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#display {
+    flex: 1;
+}
+
+.action {
+    width: 100%;
+    font-size: 30px;
+    cursor: pointer;
+    border-radius: 3px;
+    background-color: #eec326;
+}
+
+.action:disabled {
+    cursor: not-allowed;
+}
+
+.action:not(:disabled):hover {
+    background-color: #cba321;
+}
+
+#cover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #eec326;
+}
+
+#cover.hidden {
+    display: none;
+}
+
+#nodatayet.hidden {
+    display: none;
+}
+
+#stats {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.stat {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    font-size: 24px;
+}
+
+#reload {
+    background-color: transparent;
+    position: fixed;
+    right: 0;
+    top: 0;
+    margin: 2px;
+    font-size: 20px;
+    cursor: pointer;
+}
